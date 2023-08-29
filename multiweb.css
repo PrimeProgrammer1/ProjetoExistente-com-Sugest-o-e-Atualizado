@@ -1,0 +1,109 @@
+body{
+    background-color: #F5f5dc;
+    color: orange;
+    
+
+}
+
+h1{
+background-color: #F5f5dc;
+color: orange;
+text-align: center;
+
+}
+hr{
+color:black;
+
+
+}
+
+h2{
+background-color: #F5f5dc;
+color: orange;
+text-align: center;
+
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  Conteudo1{
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0;
+  }
+
+  Conteudo2{
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0;
+  }
+  Conteudo3{
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0;
+  }
+  Conteudo4{
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0;
+  }
+
+
+img{
+    width: 300px;
+    height:200px;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+    padding-right:425px;
+    border: 1px;
+    border-color: orange;
+    display: flex;
+    
+    max-width: 50%;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0;
+    
+
+}
+
+form{
+
+    text-align: center;
+    align-items: center;
+}
+p{
+color: orange;
+padding-right: 10px;
+padding-left: 10px;
+font-size: 18px;
+margin: 50px;
+
+
+}
+
