@@ -12,49 +12,97 @@
 </head>
 
 <body>
-    <hr>
-    <h1>
-        <marquee>Restaurante Mouse Malboro</marquee>
-    </h1>
-
-    <hr>
-
-    <h2>O melhor da Gastronomia</h2>
-
-    <hr>
-
-    <a href="/header.html">
-        <button>Voltar ao Menu</button>
-    </a>
-
-    <a href="/Reserva.html"><button>Reserva</button></a>
-
-    <a href="/Sugest.html">
-        <button>Sugestões</button>
-    </a>
-    <hr>
+        <div class="Cabeçalho">
+                <hr>
+                <h1 style="text-align:left">
+                  Restaurante Mouse Malboro
+            
+                  <a href="/header.html" style="text-align:left">
+                    <button>Voltar ao Menu</button>
+                </a>
+                  <a href="/Reserva.html" style="text-align:left">
+                    <button>Reserva</button>
+                  </a>
+                  <a href="/Sugest.html" style="text-align:left">
+                    <button>Sugestões</button>
+                  </a>
+                  <style>
+                    .dropbtn {
+                      background-color: #04AA6D;
+                      color: white;
+                      padding: 16px;
+                      font-size: 16px;
+                      border: none;
+                      cursor: pointer;
+                    }
+            
+                    .dropbtn:hover,
+                    .dropbtn:focus {
+                      background-color: #3e8e41;
+                    }
+            
+                    #myInput {
+                      box-sizing: border-box;
+                      background-image: url('searchicon.png');
+                      background-position: 14px 12px;
+                      background-repeat: no-repeat;
+                      font-size: 12px;
+                      padding: 14px 20px 12px 35px;
+                      border: none;
+                      border-bottom: 1px solid #ddd;
+                    }
+            
+                    #myInput:focus {
+                      outline: 3px solid #ddd;
+                    }
+            
+                    .dropdown {
+                      position: relative;
+                      display: inline-block;
+                    }
+            
+                    .dropdown-content {
+                      display: none;
+                      position: absolute;
+                      background-color: #f6f6f6;
+                      min-width: 230px;
+                      overflow: auto;
+                      border: 1px solid #ddd;
+                      z-index: 1;
+                    }
+            
+                    .dropdown-content a {
+                      color: black;
+                      padding: 12px 20px;
+                      text-decoration: none;
+                      display: block;
+                    }
+            
+                    .dropdown a:hover {
+                      background-color: #ddd;
+                    }
+            
+                    .show {
+                      display: block;
+                    }
+                  </style>
     <p></p>
 
     <h2>Cadastro</h2>
     <hr>
     <p></p>
     <p></p>
-    <form action="/action_page.php">
-        <label for="fname">CPF:</label>
-        <input type="num" id="fname" name="fname">
+    <form>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required maxlength="11">
         <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
         <br>
-        <label for="senhaUsuario">Senha: </label>
-        <input id="senhaUsuario" type="password" />
-        <br>
-        <br>
-        <hr>
-        <input type="submit" value="Submit">
-        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
-        <input type="reset" value="Reset">
-
+        <button type="submit">Enviar</button>
     </form>
 
+    <script src="multi.js"></script>
 </body>
 
 </html>

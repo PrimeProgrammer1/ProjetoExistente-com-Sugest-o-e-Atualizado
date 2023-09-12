@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Restaurante Mouse Malboro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="multiweb.css">
+    <script src="multi.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="Cabeçalho">
+        <hr>
+        <h1 style="text-align:left">
+            Restaurante Mouse Malboro
+
+            <a href="/Form.html" style="text-align:left">
+                <button>Cadastro</button>
+            </a>
+            <a href="/Reserva.html" style="text-align:left">
+                <button>Reserva</button>
+            </a>
+            <a href="/Sugest.html" style="text-align:left">
+                <button>Sugestões</button>
+            </a>
+            <a href="/header.html">
+                <button>Voltar ao Menu</button>
+            </a>
+            <style>
+                .dropbtn {
+                    background-color: #04AA6D;
+                    color: white;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .dropbtn:hover,
+                .dropbtn:focus {
+                    background-color: #3e8e41;
+                }
+
+                #myInput {
+                    box-sizing: border-box;
+                    background-image: url('searchicon.png');
+                    background-position: 14px 12px;
+                    background-repeat: no-repeat;
+                    font-size: 12px;
+                    padding: 14px 20px 12px 35px;
+                    border: none;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                #myInput:focus {
+                    outline: 3px solid #ddd;
+                }
+
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f6f6f6;
+                    min-width: 230px;
+                    overflow: auto;
+                    border: 1px solid #ddd;
+                    z-index: 1;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 20px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .dropdown a:hover {
+                    background-color: #ddd;
+                }
+
+                .show {
+                    display: block;
+                }
+            </style>
+            </head>
+
+            <body style="background-color:white;">
+
+
+
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                        <a href="/CozinhaFrancesa.html">Comida Francesa</a>
+                        <a href="/CozinhaJaponesa.html">Comida Japonesa</a>
+                        <a href="/Sobremesas.html">Sobremesas</a>
+
+                    </div>
+                </div>
+
+                <script>
+                    /* When the user clicks on the button,
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+
+                    function filterFunction() {
+                        var input, filter, ul, li, a, i;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        div = document.getElementById("myDropdown");
+                        a = div.getElementsByTagName("a");
+                        for (i = 0; i < a.length; i++) {
+                            txtValue = a[i].textContent || a[i].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                a[i].style.display = "";
+                            } else {
+                                a[i].style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+
+        </h1>
+    </div>
+
+
+    <hr>
+
+
+
+    <h2>O melhor da Gastronomia</h2>
+    <hr>
+
+
+    <p>Funcionando das 9:00 até as 22:30 todos os dias da semana, o Restaurante Mouse Malboro apresenta váriadas refeições e
+        pratos exclusivos de outros países</p>
+    <hr>
+
+    <div class="container">
+        <div class="Conteudo1">
+
+            <h3 style="text-align:center;color:black">
+                Cardápio
+            </h3>
+
+            <hr>
+            <h2>Cozinha Italiana </h2>
+            <hr>
+        </div>
+        <div class="Conteudo3">
+            <table style="width:100%">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+
+
+                        <td>
+                            <img src="https://th.bing.com/th/id/OIP.sJ8mM4PnfinZLp_zymCw1gHaFF?pid=ImgDet&rs=1" />
+                            <hr>
+                            <p>Pizza Italiana Tradicional</p>
+                            <table>
+                                <tr>
+                                    <th>Tamanho</th>
+                                    <th>Valor Energético</th>
+                                </tr>
+                                <tr>
+                                    <td>Pequena(4 Fatias)</td>
+                                    <td>966 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td>Média(6 Fatias)</td>
+                                    <td>1225 kcal</td>
+                                </tr>
+                                <tr>
+                                    <td>Grande(8 Fatias)</td>
+                                    <td>1510 kcal</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <table style="width:100%">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://th.bing.com/th/id/OIP.28bp-qek1ebOGL-wzUJ7bAHaEB?pid=ImgDet&rs=1" />
+                            <hr>
+                            <p>Macarrão</p>
+                            <table>
+                                <tr>
+                                    <th>Prato</th>
+                                    <th>Valor Energético</th>
+                                </tr>
+                                <tr>
+                                    <td>100 gramas</td>
+                                    <td>325 kcal</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="Conteudo3">
+                <table style="width:100%">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+
+                            <td>
+                                <img src="https://th.bing.com/th/id/OIP.sJ8mM4PnfinZLp_zymCw1gHaFF?pid=ImgDet&rs=1" />
+                                <hr>
+                                <p>Pizza Italiana Tradicional</p>
+                                <table>
+                                    <tr>
+                                        <th>Tamanho</th>
+                                        <th>Valor Energético</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Pequena(4 Fatias)</td>
+                                        <td>966 kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Média(6 Fatias)</td>
+                                        <td>1225 kcal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grande(8 Fatias)</td>
+                                        <td>1510 kcal</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                <table style="width:100%">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://th.bing.com/th/id/OIP.28bp-qek1ebOGL-wzUJ7bAHaEB?pid=ImgDet&rs=1" />
+                                <hr>
+                                <p>Macarrão</p>
+                                <table>
+                                    <tr>
+                                        <th>Prato</th>
+                                        <th>Valor Energético</th>
+                                    </tr>
+                                    <tr>
+                                        <td>100 gramas</td>
+                                        <td>325 kcal</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="Conteudo3">
+                    <table style="width:100%">
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+
+                                <td>
+                                    <img src="https://th.bing.com/th/id/OIP.sJ8mM4PnfinZLp_zymCw1gHaFF?pid=ImgDet&rs=1" />
+                                    <hr>
+                                    <p>Pizza Italiana Tradicional</p>
+                                    <table>
+                                        <tr>
+                                            <th>Tamanho</th>
+                                            <th>Valor Energético</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Pequena(4 Fatias)</td>
+                                            <td>966 kcal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Média(6 Fatias)</td>
+                                            <td>1225 kcal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Grande(8 Fatias)</td>
+                                            <td>1510 kcal</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                    <table style="width:100%">
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="https://th.bing.com/th/id/OIP.28bp-qek1ebOGL-wzUJ7bAHaEB?pid=ImgDet&rs=1" />
+                                    <hr>
+                                    <p>Macarrão</p>
+                                    <table>
+                                        <tr>
+                                            <th>Prato</th>
+                                            <th>Valor Energético</th>
+                                        </tr>
+                                        <tr>
+                                            <td>100 gramas</td>
+                                            <td>325 kcal</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    </body>
+
+</html>

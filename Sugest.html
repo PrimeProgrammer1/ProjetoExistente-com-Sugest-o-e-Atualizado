@@ -12,41 +12,101 @@
 
 <body>
 
-    <hr>
+    <div class="Cabeçalho">
+        <hr>
+        <h1 style="text-align:left">
+            Restaurante Mouse Malboro
 
-    <h1>
-        <marquee>Restaurante Mouse Malboro</marquee>
-    </h1>
 
-    <hr>
+            <a href="/header.html" style="text-align:left">
+                <button>Voltar ao Menu</button>
+            </a>
+            <a href="/Form.html" style="text-align:left">
+                <button>Cadastro</button>
+            </a>
+            <a href="/Reserva.html" style="text-align:left">
+                <button>Reserva</button>
+            </a>
 
-    <h1>Sugestões</h1>
+            <style>
+                .dropbtn {
+                    background-color: #04AA6D;
+                    color: white;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
 
-    <hr>
+                .dropbtn:hover,
+                .dropbtn:focus {
+                    background-color: #3e8e41;
+                }
 
-    <a href="/header.html">
-        <button>Voltar ao Menu</button>
-    </a>
-    <a href="/Form.html">
-        <button>Cadastro</button>
-    </a>
-    <a href="/Reserva.html">
-        <button>Reserva</button>
-    </a>
+                #myInput {
+                    box-sizing: border-box;
+                    background-image: url('searchicon.png');
+                    background-position: 14px 12px;
+                    background-repeat: no-repeat;
+                    font-size: 12px;
+                    padding: 14px 20px 12px 35px;
+                    border: none;
+                    border-bottom: 1px solid #ddd;
+                }
 
-    <hr>
+                #myInput:focus {
+                    outline: 3px solid #ddd;
+                }
 
-    <label for="Sugestões">Dê nos Sugestões de Novos Pratos para serem inseridos no Menu!
-    </label>
-    <br>
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
 
-    <textarea id="Sugestões" name="Sugestões" rows="4" cols="50">
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f6f6f6;
+                    min-width: 230px;
+                    overflow: auto;
+                    border: 1px solid #ddd;
+                    z-index: 1;
+                }
 
-</textarea>
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 20px;
+                    text-decoration: none;
+                    display: block;
+                }
 
-    <hr>
+                .dropdown a:hover {
+                    background-color: #ddd;
+                }
 
-    <input name="Submit" type="submit" class="formobjects" value="Enviar Mensagem">
+                .show {
+                    display: block;
+                }
+            </style>
+
+            <p></p>
+
+            <h2>Sugestões</h2>
+            
+            <p></p>
+            <p></p>
+
+            <hr>
+            <ul id="lista"></ul>
+            <br>
+            <label for="sugestao">Dê nos Sugestões de Novos Pratos para serem inseridos no Menu!
+            </label>
+            <br>
+
+            <input type="text" id="sugestao" name="sugestao" placeholder="Sugestões">
+            <button onclick="sugestoes()">Adicionar Sugestão</button>
+
+            <hr>
 
 </body>
 

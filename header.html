@@ -9,206 +9,509 @@
   <link rel="stylesheet" href="multiweb.css">
   <script src="multi.js"></script>
 
-  
+
 
 </head>
 
 <body>
 
-  <hr>
-  <h1>
-    <marquee>Restaurante Mouse Malboro</marquee>
-  </h1>
+  <div class="Cabeçalho">
+    <hr>
+    <h1 style="text-align:left">
+      Restaurante Mouse Malboro
+
+      <a href="/Form.html" style="text-align:left">
+        <button>Cadastro</button>
+      </a>
+      <a href="/Reserva.html" style="text-align:left">
+        <button>Reserva</button>
+      </a>
+      <a href="/Sugest.html" style="text-align:left">
+        <button>Sugestões</button>
+      </a>
+      <style>
+        .dropbtn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .dropbtn:hover,
+        .dropbtn:focus {
+          background-color: #3e8e41;
+        }
+
+        #myInput {
+          box-sizing: border-box;
+          background-image: url('searchicon.png');
+          background-position: 14px 12px;
+          background-repeat: no-repeat;
+          font-size: 12px;
+          padding: 14px 20px 12px 35px;
+          border: none;
+          border-bottom: 1px solid #ddd;
+        }
+
+        #myInput:focus {
+          outline: 3px solid #ddd;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f6f6f6;
+          min-width: 230px;
+          overflow: auto;
+          border: 1px solid #ddd;
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 20px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {
+          background-color: #ddd;
+        }
+
+        .show {
+          display: block;
+        }
+      </style>
+      </head>
+
+      <body style="background-color:white;">
+
+
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href="/CozinhaFrancesa.html">Comida Francesa</a>
+            <a href="/CozinhaItaliana.html">Comida Italiana</a>
+            <a href="/CozinhaJaponesa.html">Comida Japonesa</a>
+            <a href="/Sobremesas.html">Sobremesas</a>
+
+          </div>
+        </div>
+
+        <script>
+          /* When the user clicks on the button,
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+              txtValue = a[i].textContent || a[i].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+              } else {
+                a[i].style.display = "none";
+              }
+            }
+          }
+        </script>
+
+    </h1>
+  </div>
+
+
   <hr>
 
-  <style="background-image: url(imagens/background2.gif)"><
+
 
   <h2>O melhor da Gastronomia</h2>
   <hr>
 
 
-  <a href="/Form.html">
-    <button>Cadastro</button>
-  </a>
-
-  <a href="/Reserva.html">
-    <button>Reserva</button>
-  </a>
-
-  <a href="/Sugest.html">
-    <button>Sugestões</button>
-  </a>
-  <hr>
-  <p>Funcionando das 9:00 até as 22:30 todos os dias da semana, o Restaurante Mouse Malboro apresenta váriadas refeições
-    e pratos
+  <p>Funcionando das 9:00 até as 22:30 todos os dias da semana, o Restaurante Mouse Malboro apresenta váriadas refeições e pratos
     exclusivos de outros países</p>
   <hr>
 
-  <div class="container">
-    <div class="Conteudo1">
 
-      <h3 style="text-align:center;color:orange">
-        Cardápio
-      </h3>
+  <div class="Conteudo1">
 
-      <hr>
-      <h2>Cozinha Francesa </h2>
-      <hr>
+    <h3 style="text-align:center;color:black">
+      Cardápio
+    </h3>
+
+    <hr>
+    <h2>Cozinha Francesa </h2>
+    <hr>
+  </div>
+  <div class="Conteudo2">
+      <table style="width:100%">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+
+
+          <td>
+            <img src="https://static.itdg.com.br/images/1200-630/617a8df64aa30793e946a4847a496a62/comida-francesa-ratatouille.jpg" />
+            <hr>
+            <p>Ratatouille</p>
+            <table>
+              <tr>
+                <th>Peça</th>
+                <th>Valor Enegético</th>
+              </tr>
+              <tr>
+                <td>1 Unidade</td>
+                <td>20 kcal</td>
+              </tr>
+              <tr>
+                <td>6 Unidades</td>
+                <td>77 kcal</td>
+              </tr>
+
+
+          </td>
+        </tr>
+        </table>
+      </tbody>
+    </table>
+
+
+
+
+    <table style="width:100%">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="https://th.bing.com/th/id/OIP.-U_lnJcREHkutM-Ms0E_rgHaE7?pid=ImgDet&rs=1" />
+            <hr>
+            <p>Quiche de Alho e Edame</p>
+            <table>
+              <tr>
+                <th>Fatia</th>
+                <th>Valor Energético</th>
+              </tr>
+              <tr>
+                <td>1 Unidade</td>
+                <td>65 kcal</td>
+              </tr>
+              <tr>
+                <td>5 Fatias</td>
+                <td>325 kcal</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+  <h2>Cozinha Italiana</h2>
+  <hr>
+
+  <div class="Conteudo3">
+      <table style="width:100%">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+
+
+          <td>
+            <img src="https://th.bing.com/th/id/OIP.sJ8mM4PnfinZLp_zymCw1gHaFF?pid=ImgDet&rs=1" />
+            <hr>
+            <p>Pizza Italiana Tradicional</p>
+            <table>
+              <tr>
+                <th>Tamanho</th>
+                <th>Valor Energético</th>
+              </tr>
+              <tr>
+                <td>Pequena(4 Fatias)</td>
+                <td>966 kcal</td>
+              </tr>
+              <tr>
+                <td>Média(6 Fatias)</td>
+                <td>1225 kcal</td>
+              </tr>
+              <tr>
+                <td>Grande(8 Fatias)</td>
+                <td>1510 kcal</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <table style="width:100%">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="https://th.bing.com/th/id/OIP.28bp-qek1ebOGL-wzUJ7bAHaEB?pid=ImgDet&rs=1" />
+            <hr>
+            <p>Macarrão</p>
+            <table>
+              <tr>
+                <th>Prato</th>
+                <th>Valor Energético</th>
+              </tr>
+              <tr>
+                <td>100 gramas</td>
+                <td>325 kcal</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Cozinha Japonesa</h2>
+
+    <hr>
+
+    <div class="Conteudo4">
+        <table style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td>
+              <img src="https://th.bing.com/th/id/R.7d1ae23118b4b677e031628e4b4b3e05?rik=N988lqHu2JPTSA&riu=http%3a%2f%2fwww.readersdigest.ca%2fwp-content%2fuploads%2f2011%2f11%2fjapanese-sushi-rolls.jpg&ehk=eYdY2WFHz%2fC8vb%2fQT0P8jnjrP941mY9BvoDxCDEciR8%3d&risl=&pid=ImgRaw&r=0">
+
+              <hr>
+              <p>Sushi</p>
+              
+              <table>
+                <tr>
+                  <th>Peça</th>
+                  <th>Valor Energético</th>
+                </tr>
+                <tr>
+                  <td>1 Peça</td>
+                  <td>26.70 kcal</td>
+                </tr>
+                <tr>
+                  <td>6 Peças</td>
+                  <td>160.2 kcal</td>
+                </tr>
+              </table>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+      <table style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td>
+              <img src="https://th.bing.com/th/id/OIP.Q11ye05HjdN9ZFcj1EijvgHaE7?pid=ImgDet&rs=1" />
+              <hr>
+              <p>Temaki</p>
+              <table>
+                <tr>
+                  <th>Peça</th>
+                  <th>Valor Energético</th>
+                </tr>
+                <tr>
+                  <td>1 Peça</td>
+                  <td>174 kcal</td>
+                </tr>
+                <tr>
+                  <td>3 Peças</td>
+                  <td>522 kcal</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
     </div>
-    <div class="Conteudo2">
-      <table>
+
+
+    <hr>
+    <p>Dos pratos mais servidos no estabelecimento, estão nossa Pizza Italiana Tradicional, Ratatouille, Sushi, e dentre mais
+      outras opções que estão presentes na mais váriada culinária da cidade.</p>
+
+    <hr>
+
+    <h2>Sobremesas</h2>
+
+    <hr>
+
+    <div class="Conteudo3">
+        <table style="width:100%">
         <thead>
         </thead>
         <tbody>
           <tr>
 
 
-            <td>
-              <img
-                src="https://static.itdg.com.br/images/1200-630/617a8df64aa30793e946a4847a496a62/comida-francesa-ratatouille.jpg" />
-              <hr>
-              <p>Ratatouille</p>
-            </td>
 
             <td>
-              <img src="https://th.bing.com/th/id/OIP.-U_lnJcREHkutM-Ms0E_rgHaE7?pid=ImgDet&rs=1" />
+
+              <img src="https://static.itdg.com.br/images/1200-630/d1d8e8dd70eae46fa896cfd631533595/303163-original.jpg" />
               <hr>
-              <p>Quiche de Alho e Edame</p>
+              <p>Manju</p>
+              <table>
+                <tr>
+                  <th>Unidade</th>
+                  <th>Valor Energético</th>
+                </tr>
+                <tr>
+                  <td>1 Unid (30g)</td>
+                  <td>119 kcal</td>
+                </tr>
+                <tr>
+                  <td>6 Unid</td>
+                  <td>714 kcal</td>
+                </tr>
+              </table>
             </td>
           </tr>
         </tbody>
       </table>
 
-      <hr>
-      <h2>Cozinha Italiana</h2>
-      <hr>
+
+      <table style="width:100%">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+
+              <img src="https://ribeirao.emporiotartufo.com.br/image/cache/catalog/img/produtos_2021/126065-PETIT-GATEAU-CHOCOLATE-2UN-180-GRAMAS-SANTA-JULIA-a-756x567.jpg"
+              />
+              <hr>
+              <p>Petit Gateau</p>
+              <table>
+                <tr>
+                  <th>Unidade</th>
+                  <th>Valor Energético</th>
+                </tr>
+                <tr>
+                  <td>1 Unid</td>
+                  <td>251 kcal</td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
 
       <div class="Conteudo3">
-        <table>
+          <table style="width:100%">
           <thead>
           </thead>
           <tbody>
             <tr>
 
+              <td>
 
-              <td>
-                <img src="https://th.bing.com/th/id/OIP.sJ8mM4PnfinZLp_zymCw1gHaFF?pid=ImgDet&rs=1" />
+                <img src="https://uploads.metropoles.com/wp-content/uploads/2017/02/10114957/Dolce-Far-Niente_Tiramis%C3%B9_Foto-de-Rener-Oliveira-Fotografia-7.jpg"
+                />
                 <hr>
-                <p>Pizza Italiana Tradicional</p>
+                <p>Tiramusu</p>
+                <table>
+                  <tr>
+                    <th>Unidade</th>
+                    <th>Valor Energético</th>
+                  </tr>
+                  <tr>
+                    <td>1 Unid</td>
+                    <td>492 kcal</td>
+                  </tr>
+
+                </table>
               </td>
-              <td>
-                <img src="https://th.bing.com/th/id/OIP.28bp-qek1ebOGL-wzUJ7bAHaEB?pid=ImgDet&rs=1" />
-                <hr>
-                <p>Macarrão</p>
-              </td>
+            </tr>
           </tbody>
         </table>
-        <hr>
-        <h2>Cozinha Japonesa</h2>
-        <hr>
-        <div class="Conteudo4">
-          <table>
-            <thead>
-            </thead>
-            <tbody>
-              <tr>
-
-                <td>
-                  <img
-                    src="https://th.bing.com/th/id/R.7d1ae23118b4b677e031628e4b4b3e05?rik=N988lqHu2JPTSA&riu=http%3a%2f%2fwww.readersdigest.ca%2fwp-content%2fuploads%2f2011%2f11%2fjapanese-sushi-rolls.jpg&ehk=eYdY2WFHz%2fC8vb%2fQT0P8jnjrP941mY9BvoDxCDEciR8%3d&risl=&pid=ImgRaw&r=0">
-                  <hr>
-                  <p>Sushi</p>
-                </td>
-
-                <td>
-                  <img src="https://th.bing.com/th/id/OIP.Q11ye05HjdN9ZFcj1EijvgHaE7?pid=ImgDet&rs=1" />
-                  <hr>
-                  <p>Temaki</p>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
 
 
 
-        </div>
-      </div>
-
-      <hr>
-      <p>Dos pratos mais servidos no estabelecimento, estão nossa Pizza Italiana Tradicional, Ratatouille, Sushi, e
-        dentre mais
-        outras opções que estão presentes na mais váriada culinária da cidade.</p>
-
-      <hr>
-      <h2>Sobremesas</h2>
-      <hr>
-
-      <div class="Conteudo3">
-        <table>
+        <table style="width:100%">
           <thead>
           </thead>
           <tbody>
             <tr>
-
-
               <td>
-
-                <img
-                  src="https://static.itdg.com.br/images/1200-630/d1d8e8dd70eae46fa896cfd631533595/303163-original.jpg" />
                 <hr>
-                <p>Manju</p>
-              </td>
-              <td>
-
-                <img
-                  src="https://ribeirao.emporiotartufo.com.br/image/cache/catalog/img/produtos_2021/126065-PETIT-GATEAU-CHOCOLATE-2UN-180-GRAMAS-SANTA-JULIA-a-756x567.jpg" />
+                <img src="https://s2.glbimg.com/nr6OqF9avlYaYZ1e5Vn1C9Es1m4=/smart/e.glbimg.com/og/ed/f/original/2020/10/15/receita-palha-italiana.jpg"
+                />
                 <hr>
-                <p>Petit Gateau</p>
-              </td>
+                <p>Palha Italiana</p>
+                <table>
+                  <tr>
+                    <th>Unidade</th>
+                    <th>Valor Energético</th>
+                  </tr>
+                  <tr>
+                    <td>1 Unidade</td>
+                    <td>204 kcal</td>
+                  </tr>
 
+                </table>
+              </td>
+            </tr>
           </tbody>
         </table>
 
-        <div class="Conteudo3">
-          <table>
-            <thead>
-            </thead>
-            <tbody>
-              <tr>
+        <hr>
 
-                <td>
-                  <hr>
-                  <img
-                    src="https://uploads.metropoles.com/wp-content/uploads/2017/02/10114957/Dolce-Far-Niente_Tiramis%C3%B9_Foto-de-Rener-Oliveira-Fotografia-7.jpg" />
-                  <hr>
-                  <p>Tiramusu</p>
-                </td>
-                <td>
-                  <hr>
-                  <img
-                    src="https://s2.glbimg.com/nr6OqF9avlYaYZ1e5Vn1C9Es1m4=/smart/e.glbimg.com/og/ed/f/original/2020/10/15/receita-palha-italiana.jpg" />
-                  <hr>
-                  <p>Palha Italiana</p>
-                </td>
-            </tbody>
-          </table>
 
+        <div class="fim">
+          <h3>Nomes de Participação:</h3>
+          <br>
+          <h4>Lucas Von Dentz Cruz</h4>
+          <h4>RA:2023100128</h4>
+          <br>
+          <h4>Julian Anthony Moreira Campeão</h4>
+          <h4>RA:2023102814</h4>
+          <br>
+          <h4>Eduardo</h4>
+          <h4>RA:2023101018</h4>
           <hr>
+        </div>
 
-          <div class="fim">
-            <h3>Nomes de Participação:</h3>
-            <br>
-            <h4>Lucas Von Dentz Cruz</h4>
-            <h4>RA:</h4>
-            <br>
-            <h4>Julian Anthony Moreira Campeão</h4>
-            <h4>RA:</h4>
-            <br>
-            <h4>Eduardo</h4>
-            <h4>RA:</h4>
-            <hr>
-          </div>
-</body>
+        </body>
 
 </html>
