@@ -38,120 +38,98 @@
 
     <hr>
 
-    <h4 style="text-align:left">Data da Reserva</h4>
-    <label>Dia:</a>
-        <select name="Dia">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-            <option value="31">31</option>
-        </select>
+    <table id="calendar">
+        <thead>
+          <tr>
+            <th colspan="7" id="month-year"></th>
+          </tr>
+          <tr>
+            <th>Domingo</th>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+            <th>Sábado</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    
+      <script>
 
-        
+        function createCalendar(year, month) {
+          var tableBody = document.querySelector("#calendar tbody");
+          var monthYearHeader = document.querySelector("#month-year");
+          tableBody.innerHTML = "";
+          
+          var firstDay = new Date(year, month, 1);
+          
+          var lastDay = new Date(year, month + 1, 0).getDate();
+          
+          var startDayIndex = firstDay.getDay();
+          
+          monthYearHeader.innerHTML = new Intl.DateTimeFormat('pt-BR', { year: 'numeric', month: 'long' }).format(firstDay);
+          
+          var weekRow = document.createElement("tr");
+          tableBody.appendChild(weekRow);
+    
+          for (var i = 0; i < startDayIndex; i++) {
+            var cell = document.createElement("td");
+            weekRow.appendChild(cell);
+          }
+          
+          var currentDay = 1;
+          for (var i = startDayIndex; i < 7; i++) {
+            var cell = document.createElement("td");
+            cell.innerHTML = currentDay;
+            cell.addEventListener("click", function() {
 
-        <h4 style="text-align:left">Nº da Mesa para a Reserva</h4>
-        <label>Mesa:</a>
-            <select name="Mesa">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-                <option value="32">32</option>
-            </select>
-
+              selectDay(this);
+            });
+            weekRow.appendChild(cell);
+            currentDay++;
+          }
+          
+          while (currentDay <= lastDay) {
+            var weekRow = document.createElement("tr");
+            tableBody.appendChild(weekRow);
             
+            for (var i = 0; i < 7; i++) {
+              if (currentDay > lastDay) {
+                break;
+              }
+              
+              var cell = document.createElement("td");
+              cell.innerHTML = currentDay;
+              cell.addEventListener("click", function() {
 
-            <h4 style="text-align:left">Horário para Reserva</h4>
-            <label>Horário</a>
-                <select name="Hora">
-                    <option value="hora1">9:00</option>
-                    <option value="hora2">9:30</option>
-                    <option value="hora3">10:00</option>
-                    <option value="hora4">10:30</option>
-                    <option value="hora5">11:00</option>
-                    <option value="hora6">11:30</option>
-                    <option value="hora7">12:00</option>
-                    <option value="hora8">12:30</option>
-                    <option value="hora9">13:00</option>
-                    <option value="hora10">13:30</option>
-                    <option value="hora11">14:00</option>
-                    <option value="hora12">14:30</option>
-                    <option value="hora13">15:00</option>
-                    <option value="hora14">15:30</option>
-                    <option value="hora15">16:00</option>
-                    <option value="hora16">16:30</option>
-                    <option value="hora17">17:00</option>
-                    <option value="hora18">17:30</option>
-                    <option value="hora19">18:00</option>
-                    <option value="hora20">18:30</option>
-                    <option value="hora21">19:00</option>
-                    <option value="hora22">19:30</option>
-                    <option value="hora23">20:00</option>
-                    <option value="hora24">20:30</option>
-                    <option value="hora25">21:00</option>
-                    <option value="hora26">21:30</option>
-                    <option value="hora27">22:00</option>
+                selectDay(this);
+              });
+              weekRow.appendChild(cell);
+              currentDay++;
+            }
+          }
+        }
+        
+        function selectDay(cell) {
 
-                </select>
-
-                <br>
-                <hr>
-
-                <input name="Submit" type="submit" class="formobjects" value="Enviar dados">
+          var selectedDay = document.querySelector(".selected");
+          if (selectedDay) {
+            selectedDay.classList.remove("selected");
+          }
+          
+          cell.classList.add("selected");
+          
+          console.log(cell.innerHTML);
+        }
+        
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        var currentMonth = currentDate.getMonth();
+        
+        createCalendar(currentYear, currentMonth);
+      </script>
 
 </body>
 

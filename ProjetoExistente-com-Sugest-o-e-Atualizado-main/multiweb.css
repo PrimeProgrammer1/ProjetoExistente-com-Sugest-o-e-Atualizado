@@ -107,3 +107,18 @@ margin: 50px;
 
 }
 
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+td:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
